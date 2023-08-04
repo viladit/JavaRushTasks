@@ -37,7 +37,14 @@ public class Solution {
     }
 
     public static int toDecimal(String hexNumber) {
-
-        return 0;
+        int decimal = 0;
+        if (hexNumber == null || hexNumber.equals(""))
+        {
+            return 0;
+        }
+        for (int i = 0; i < hexNumber.length(); i++) {
+            decimal = 16 * decimal + HEX.indexOf(hexNumber.charAt(i));
+        }
+        return decimal;
     }
 }
